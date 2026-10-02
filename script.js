@@ -8,8 +8,11 @@ const products = [
   {name:"Kayali · 100 ml",cat:"perfume",price:30,desc:"Perfume Kayali en formato de 100 ml.",img:"kayali-100.jpeg"},
   {name:"Kayali · Pack 5 × 30 ml",cat:"pack",price:35,desc:"Pack de 5 perfumes Kayali de 30 ml.",img:"kayali-pack.jpeg"},
   {name:"Sol de Janeiro · Pack 5 Brumas",cat:"bruma",price:25,desc:"Discovery set con 5 brumas: 40, 59, 62, 68 y 87.",img:"sol-brumas.jpeg"},
-  {name:"Sol de Janeiro · Neceser",cat:"pack",price:25,desc:"Neceser Sol de Janeiro con productos de cuidado corporal.",img:"sol-neceser.jpeg"},
-  {name:"Sol de Janeiro · Pack",cat:"pack",price:30,desc:"Pack de cuidado corporal Sol de Janeiro.",img:"sol-pack.jpeg"},
+  {name:"Sol de Janeiro · Neceser 1",cat:"pack",price:25,desc:"Neceser Sol de Janeiro.",img:"sol-neceser.jpeg"},
+  {name:"Sol de Janeiro · Neceser 2",cat:"pack",price:25,desc:"Neceser Sol de Janeiro.",img:"sol-neceser.jpeg"},
+  {name:"Sol de Janeiro · Caja 1",cat:"pack",price:30,desc:"Caja Sol de Janeiro.",img:"sol-pack.jpeg"},
+  {name:"Sol de Janeiro · Caja 2",cat:"pack",price:30,desc:"Caja Sol de Janeiro.",img:"sol-pack.jpeg"},
+  {name:"Sol de Janeiro · Caja 3",cat:"pack",price:30,desc:"Caja Sol de Janeiro.",img:"sol-pack.jpeg"},
   {name:"Miss Vanessa Yara · Perfume Spray Set",cat:"pack",price:30,desc:"Set de perfume spray de 40 ml.",img:"miss-vanessa-yara.jpeg"},
   {name:"Yara Bourbon · Crema + perfume 35 ml",cat:"pack",price:5,desc:"Set Yara Bourbon de crema y perfume de 35 ml.",img:"yara-bourbon-catalogo.png"}
 ];
