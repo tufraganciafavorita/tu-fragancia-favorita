@@ -13,8 +13,7 @@ const products = [
   {name:"Sol de Janeiro · Caja 1",cat:"pack",price:30,desc:"Caja Sol de Janeiro.",img:"sol-pack.jpeg"},
   {name:"Sol de Janeiro · Caja 2",cat:"pack",price:30,desc:"Caja Sol de Janeiro.",img:"sol-pack.jpeg"},
   {name:"Sol de Janeiro · Caja 3",cat:"pack",price:30,desc:"Caja Sol de Janeiro.",img:"sol-pack.jpeg"},
-  {name:"Miss Vanessa Yara · Perfume Spray Set",cat:"pack",price:30,desc:"Set de perfume spray de 40 ml.",img:"miss-vanessa-yara.jpeg"},
-  {name:"Yara Bourbon · Crema + perfume 35 ml",cat:"pack",price:5,desc:"Set Yara Bourbon de crema y perfume de 35 ml.",img:"yara-bourbon-catalogo.png"}
+  {name:"Miss Vanessa Yara · Perfume Spray Set",cat:"pack",price:30,desc:"Set de perfume spray de 40 ml.",img:"miss-vanessa-yara.jpeg"}
 ];
 
 let cart = [];
