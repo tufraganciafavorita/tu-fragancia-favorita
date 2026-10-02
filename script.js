@@ -37,8 +37,8 @@ function init(){
  document.getElementById("closeCart").onclick=closeCart;
  document.getElementById("overlay").onclick=closeCart;
  document.querySelectorAll(".filter").forEach(function(b){b.onclick=function(){document.querySelectorAll(".filter").forEach(function(x){x.classList.remove("active");});b.classList.add("active");render(b.dataset.filter);};});
- document.getElementById("tiktokBtn").onclick=function(){window.open("https://www.tiktok.com/@tufraganciafavorita2","_blank");};
- document.getElementById("instagramBtn").onclick=function(){window.open("https://www.instagram.com/tufraganciafavorita.2/","_blank");};
+ document.getElementById("tiktokBtn").onclick=function(){sendOrder("tiktok");};
+ document.getElementById("instagramBtn").onclick=function(){sendOrder("instagram");};
  render("todos");
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
