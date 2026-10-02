@@ -1,15 +1,9 @@
-TU FRAGANCIA FAVORITA — WEB GRATUITA
+TU FRAGANCIA FAVORITA — WEB ACTUALIZADA
+1. Descarga y descomprime este ZIP.
+2. Entra en tu repositorio de GitHub: tu-fragancia-favorita.
+3. Sube/reemplaza: index.html, style.css, script.js y la carpeta assets.
+4. No subas el ZIP dentro del repositorio.
+5. GitHub Pages usará index.html como página principal.
 
-Archivos:
-- index.html
-- style.css
-- script.js
-
-La web es estática y no necesita Shopify.
-Para publicar gratis puedes usar GitHub Pages.
-
-IMPORTANTE:
-En script.js, cambia const phone="34600000000" por tu número de WhatsApp antes de publicar.
-
-Las fotos de producto están preparadas como espacios visuales de sustitución.
-Los precios/productos son una primera propuesta y se pueden cambiar.
+La web incluye los productos y precios que hemos preparado con las fotos reales disponibles.
+Yara Bourbon está configurado a 5 €.

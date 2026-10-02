@@ -1,12 +1,15 @@
 const products=[
-{name:"Yara Eau de Parfum 35 ml",cat:"perfume",price:18.90,desc:"Un aroma dulce y femenino para todos los días."},
-{name:"Yara Cream",cat:"crema",price:15,desc:"Crema corporal para acompañar tu fragancia."},
-{name:"Cheirosa 59",cat:"bruma",price:22,desc:"Bruma corporal con un aroma cálido y envolvente."},
-{name:"Sol de Janeiro Beija Flor",cat:"pack",price:22,desc:"Pack especial para regalar o darte un capricho."},
-{name:"Aswad Aqua 100 ml",cat:"perfume",price:24.90,desc:"Una fragancia fresca y elegante."},
-{name:"Mystical Yara",cat:"perfume",price:24.90,desc:"Una opción especial para amantes de los aromas dulces."},
-{name:"Pack de brumas",cat:"pack",price:25,desc:"Selección de brumas para disfrutar y combinar."},
-{name:"Neceser especial",cat:"pack",price:25,desc:"Un detalle bonito para llevar tus favoritos."}
+{name:"Yara Hand & Body Lotion",cat:"crema",price:15,desc:"Loción corporal Yara para acompañar tu rutina.",img:"assets/yara-lotion.jpeg"},
+{name:"Mystical Yara · Set 4 × 30 ml",cat:"pack",price:25,desc:"Set de 4 perfumes de 30 ml.",img:"assets/mystical-yara.jpeg"},
+{name:"Aswad Aqua · 100 ml",cat:"perfume",price:25,desc:"Eau de parfum Aswad Aqua.",img:"assets/aswad-aqua.jpeg"},
+{name:"Kayali · 30 ml",cat:"perfume",price:10,desc:"Perfume Kayali en formato de 30 ml.",img:"assets/kayali-30.jpeg"},
+{name:"Kayali · 100 ml",cat:"perfume",price:30,desc:"Perfume Kayali en formato de 100 ml.",img:"assets/kayali-100.jpeg"},
+{name:"Kayali · Pack 5 × 30 ml",cat:"pack",price:35,desc:"Pack de 5 perfumes Kayali de 30 ml.",img:"assets/kayali-pack.jpeg"},
+{name:"Sol de Janeiro · Pack 5 Brumas",cat:"bruma",price:25,desc:"Discovery set con 5 brumas: 40, 59, 62, 68 y 87.",img:"assets/sol-brumas.jpeg"},
+{name:"Sol de Janeiro · Neceser",cat:"pack",price:25,desc:"Neceser Sol de Janeiro con productos de cuidado corporal.",img:"assets/sol-neceser.jpeg"},
+{name:"Sol de Janeiro · Pack",cat:"pack",price:30,desc:"Pack de cuidado corporal Sol de Janeiro.",img:"assets/sol-pack.jpeg"},
+{name:"Miss Vanessa Yara · Perfume Spray Set",cat:"pack",price:15,desc:"Set de perfume spray de 40 ml.",img:"assets/miss-vanessa-yara.jpeg"},
+{name:"Yara Bourbon · Crema + perfume 35 ml",cat:"pack",price:5,desc:"Set Yara Bourbon de crema y perfume de 35 ml.",img:"assets/yara-bourbon-catalogo.png"}
 ];
 let cart=[];
 const money=n=>n.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
@@ -14,7 +17,8 @@ function render(filter="todos"){
  const list=filter==="todos"?products:products.filter(p=>p.cat===filter);
  document.getElementById("productCount").textContent=`${list.length} productos`;
  document.getElementById("products").innerHTML=list.map((p,i)=>`<article class="product">
- <div class="product-img">${p.name}</div><div class="product-body"><span class="tag">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p>
+ <div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+ <div class="product-body"><span class="tag">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p>
  <div class="product-bottom"><span class="price">${money(p.price)}</span><button class="add" onclick="add(${products.indexOf(p)})">Añadir +</button></div></div></article>`).join("");
 }
 function add(i){cart.push(products[i]);updateCart();openCart()}
@@ -32,10 +36,7 @@ document.getElementById("overlay").onclick=closeCart;
 document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.filter)});
 document.getElementById("orderBtn").onclick=()=>{
  if(!cart.length)return alert("Añade algún producto al carrito.");
- const lines=cart.map(p=>`• ${p.name} — ${money(p.price)}`).join("%0A");
- const total=money(cart.reduce((s,p)=>s+p.price,0));
- // Sustituye 34600000000 por tu número de WhatsApp cuando quieras.
- const phone="34600000000";
- window.open(`https://wa.me/${phone}?text=Hola,%20quiero%20hacer%20este%20pedido:%0A${lines}%0A%0ATotal:%20${total}`,"_blank");
+ const text=encodeURIComponent("Hola, quiero consultar este pedido:\n"+cart.map(p=>`• ${p.name} — ${money(p.price)}`).join("\n")+"\n\nTotal: "+money(cart.reduce((s,p)=>s+p.price,0)));
+ window.open(`https://www.instagram.com/direct/new/?text=${text}`,"_blank");
 };
 render();
