@@ -72,14 +72,12 @@ function init() {
     };
   });
 
-  document.getElementById("orderBtn").onclick = function() {
-    if (!cart.length) return alert("Añade algún producto al carrito.");
-    const text = encodeURIComponent(
-      "Hola, quiero consultar este pedido:\n" +
-      cart.map(function(p) { return "• " + p.name + " — " + money(p.price); }).join("\n") +
-      "\n\nTotal: " + money(cart.reduce(function(s,p) { return s + p.price; },0))
-    );
-    window.open("https://www.instagram.com/direct/new/?text=" + text,"_blank");
+  document.getElementById("tiktokBtn").onclick = function() {
+    window.open("https://www.tiktok.com/@tufraganciafavorita2","_blank");
+  };
+
+  document.getElementById("instagramBtn").onclick = function() {
+    window.open("https://www.instagram.com/tufraganciafavorita.2/","_blank");
   };
 
   render("todos");
