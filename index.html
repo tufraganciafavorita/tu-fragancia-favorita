@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tu Fragancia Favorita | Perfumes, brumas y cosmética</title>
+<meta name="description" content="Tu Fragancia Favorita — perfumes, brumas, cremas y packs seleccionados con cariño.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#inicio">Tu <span>Fragancia</span> Favorita</a>
+  <nav>
+    <a href="#inicio">Inicio</a><a href="#tienda">Tienda</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+  </nav>
+  <button class="cart-btn" id="openCart">🛍️ <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <p class="eyebrow">TU FRAGANCIA FAVORITA</p>
+    <h1>Encuentra ese aroma que se convierte en <em>tu favorito.</em></h1>
+    <p class="lead">Perfumes, brumas, cremas y packs para mimarte o sorprender a alguien especial.</p>
+    <div class="hero-actions"><a class="btn" href="#tienda">Ver productos</a><a class="text-link" href="#contacto">¿Tienes una duda? →</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="sparkle">✦</div>
+    <p>DESCUBRE</p><strong>Tu próxima<br>fragancia favorita</strong>
+    <span>Selección especial · Envío rápido y seguro</span>
+  </div>
+</section>
+
+<section class="categories">
+  <a href="#tienda">🌸 Perfumes</a><a href="#tienda">✨ Brumas</a><a href="#tienda">🧴 Cremas</a><a href="#tienda">🎁 Packs & regalos</a>
+</section>
+
+<section class="section" id="tienda">
+  <div class="section-head"><div><p class="eyebrow">NUESTRA SELECCIÓN</p><h2>Productos destacados</h2></div><span id="productCount"></span></div>
+  <div class="filters">
+    <button class="filter active" data-filter="todos">Todos</button>
+    <button class="filter" data-filter="perfume">Perfumes</button>
+    <button class="filter" data-filter="bruma">Brumas</button>
+    <button class="filter" data-filter="crema">Cremas</button>
+    <button class="filter" data-filter="pack">Packs</button>
+  </div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section class="about" id="nosotros">
+  <div><p class="eyebrow">SOBRE NOSOTROS</p><h2>Pequeños detalles que huelen increíble.</h2></div>
+  <p>En <strong>Tu Fragancia Favorita</strong> nos encanta descubrir productos bonitos, aromas especiales y opciones para regalar o darte un capricho. Queremos que comprar sea fácil, cercano y seguro.</p>
+</section>
+
+<section class="contact" id="contacto">
+  <p class="eyebrow">¿HABLAMOS?</p><h2>Tu próxima fragancia está a un mensaje.</h2>
+  <p>Escríbenos para consultar disponibilidad, pedidos o recomendaciones.</p>
+  <div class="contact-buttons">
+    <a class="btn" href="https://www.instagram.com/tufraganciafavorita.2/" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn secondary" href="https://www.tiktok.com/@tufraganciafavorita2" target="_blank" rel="noopener">TikTok</a>
+  </div>
+</section>
+</main>
+
+<footer><strong>Tu Fragancia Favorita</strong><span>Perfumes · Brumas · Cremas · Regalos</span><small>© 2026 Tu Fragancia Favorita</small></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cart">
+  <div class="cart-head"><h3>Tu carrito</h3><button id="closeCart">×</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-total"><span>Total</span><strong id="total">0,00 €</strong></div>
+  <button class="btn full" id="orderBtn">Pedir por WhatsApp</button>
+  <p class="cart-note">El pedido se prepara tras confirmar disponibilidad y forma de pago.</p>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
