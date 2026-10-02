@@ -1,4 +1,5 @@
 const products = [
+{name:"Yara Bourbon · Crema + perfume 35 ml",cat:"pack",price:7.99,desc:"Set Yara Bourbon de crema y perfume de 35 ml.",img:"yara-bourbon-nuevo.jpg"},
 {name:"Yara Hand & Body Lotion",cat:"crema",price:15,desc:"Loción corporal Yara para acompañar tu rutina.",img:"yara-lotion.jpeg"},
 {name:"Mystical Yara · Set 4 × 30 ml",cat:"pack",price:30,desc:"Set de 4 perfumes de 30 ml.",img:"mystical-yara.jpeg"},
 {name:"Aswad Aqua · 100 ml",cat:"perfume",price:25,desc:"Eau de parfum Aswad Aqua.",img:"aswad-aqua.jpeg"},
