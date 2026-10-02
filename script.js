@@ -31,6 +31,18 @@ function updateCart(){
 }
 function removeItem(i){cart.splice(i,1);updateCart();}
 function openCart(){document.getElementById("cart").classList.add("open");document.getElementById("overlay").classList.add("open");}
+async function sendOrder(channel){
+ if(!cart.length){alert("Tu carrito está vacío. Añade algún producto antes de pedir 😊");return;}
+ const text=cart.map((p,i)=>(i+1)+". "+p.name+" — "+money(p.price)).join("\n");
+ const total=money(cart.reduce((s,p)=>s+p.price,0));
+ const order="Hola 😊 Quiero consultar este pedido de Tu Fragancia Favorita:\n\n"+text+"\n\nTotal: "+total+"\n\n¿Me confirmáis disponibilidad y forma de pago? Gracias 💕";
+ try{await navigator.clipboard.writeText(order);}catch(e){
+  const ta=document.createElement("textarea");ta.value=order;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand("copy");}catch(err){}ta.remove();
+ }
+ const name=channel==="instagram"?"Instagram":"TikTok";
+ alert("✅ ¡Pedido copiado! 📋\n\nAhora se abrirá nuestro "+name+".\n\n1️⃣ Pulsa «Mensaje»\n2️⃣ Pulsa en el cuadro de mensaje\n3️⃣ Mantén pulsado y elige «Pegar»\n4️⃣ ¡Envíanos tu pedido! 💕");
+ window.open(channel==="instagram"?"https://www.instagram.com/tufraganciafavorita.2/":"https://www.tiktok.com/@tufraganciafavorita2","_blank");
+}
 function closeCart(){document.getElementById("cart").classList.remove("open");document.getElementById("overlay").classList.remove("open");}
 function init(){
  document.getElementById("openCart").onclick=openCart;
