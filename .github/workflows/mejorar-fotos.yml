@@ -1,0 +1,34 @@
+name: Mejorar fotos de productos
+
+on:
+  push:
+    paths:
+      - "sol-neceser-68-rosa-products-tiny.jpg"
+      - ".github/workflows/mejorar-fotos.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  mejorar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Mejorar foto del neceser rosa
+        run: |
+          magick sol-neceser-68-rosa-products-tiny.jpg \
+            -resize 450x600 \
+            -unsharp 0x1+1+0 \
+            -quality 88 \
+            sol-neceser-68-rosa-products-tiny.jpg
+
+      - name: Guardar foto mejorada
+        run: |
+          git config user.name "tufraganciafavorita"
+          git config user.email "andreaabulez@gmail.com"
+          git add sol-neceser-68-rosa-products-tiny.jpg
+          git diff --cached --quiet && exit 0
+          git commit -m "Mejorar calidad foto neceser rosa"
+          git push
