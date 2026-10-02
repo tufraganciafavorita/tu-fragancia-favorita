@@ -10,7 +10,7 @@ const products = [
 {name:"Kayali Utopia Vanilla Coco 21 · 100 ml",cat:"perfume",price:30,desc:"Eau de parfum Kayali Utopia Vanilla Coco 21 de 100 ml.",img:"kayali-utopia-web2.jpg"},
 {name:"Kayali · Pack 5 × 30 ml",cat:"pack",price:35,desc:"Pack de 5 perfumes Kayali de 30 ml.",img:"kayali-pack.jpeg"},
 {name:"Sol de Janeiro · Pack 5 Brumas",cat:"bruma",price:25,desc:"Pack de 5 brumas.",img:"sol-brumas.jpeg"},
-{name:"Sol de Janeiro · Neceser Cheirosa 68 Beija Flor · Rosa",cat:"pack",price:25,desc:"Neceser rosa Cheirosa 68 Beija Flor.",img:"sol-neceser-68-rosa-tiny.jpg"},
+{name:"Sol de Janeiro · Neceser Cheirosa 68 Beija Flor · Rosa",cat:"pack",price:25,desc:"Neceser rosa Cheirosa 68 Beija Flor.",img:"sol-neceser-68-rosa-products-tiny.jpg"},
 {name:"Sol de Janeiro · Neceser Cheirosa 59 Delícia Drench · Azul",cat:"pack",price:25,desc:"Neceser azul Cheirosa 59 Delícia Drench.",img:"sol-neceser-59-azul.jpg"},
 {name:"Sol de Janeiro · Caja regalo Cheirosa 59 Delícia Drench · Azul",cat:"pack",price:30,desc:"Caja regalo azul Cheirosa 59.",img:"sol-pack.jpeg"},
 {name:"Sol de Janeiro · Caja regalo Cheirosa 68 Beija Flor · Rosa",cat:"pack",price:30,desc:"Caja regalo rosa Cheirosa 68.",img:"sol-pack.jpeg"},
