@@ -41,7 +41,7 @@ function money(n){return n.toLocaleString("es-ES",{style:"currency",currency:"EU
 function render(filter){
  const list=filter==="todos"?products:products.filter(p=>p.cat===filter);
  document.getElementById("productCount").textContent=list.length+" productos";
- document.getElementById("products").innerHTML=list.map(p=>'<article class="product"><div class="product-img"><div class="product-placeholder">Tu Fragancia<br><strong>Favorita</strong><span>✨</span></div></div><div class="product-body"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><p>'+p.desc+'</p><div class="product-bottom"><span class="price">'+money(p.price)+'</span><button class="add" onclick="add('+p.id+')">Añadir +</button></div></div></article>').join("");
+ document.getElementById("products").innerHTML=list.map(p=>'<article class="product"><div class="product-img">' + (p.id===9 ? '<img src="https://perfumebytay.co.za/cdn/shop/files/ChatGPT_Image_Jun_22_2026_at_04_58_44_PM.png?v=1782140338&width=1445" alt="Kayali Vanilla 28 30 ml" loading="lazy" style="width:100%;height:100%;object-fit:contain">' : '<div class="product-placeholder">Tu Fragancia<br><strong>Favorita</strong><span>✨</span></div>') + '</div>'<div class="product-body"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><p>'+p.desc+'</p><div class="product-bottom"><span class="price">'+money(p.price)+'</span><button class="add" onclick="add('+p.id+')">Añadir +</button></div></div></article>').join("");
 }
 function add(id){const p=products.find(x=>x.id===id);if(p){cart.push(p);updateCart();openCart();}}
 function updateCart(){
